@@ -1,0 +1,47 @@
+/* .floorplan-form {
+  background-color: burlywood;
+} */
+
+.empty-table {
+  position: absolute;
+  font-family: var(--brand-font);
+  /* margin: auto; */
+  width: 50%;
+  font-size: 26px;
+  margin-top: 7em;
+  /* background-color: aqua; */
+  text-align: center;
+}
+
+.floorplan-form textarea,
+textarea {
+  resize: none;
+  height: 10em !important;
+}
+
+.table {
+  width: 50em !important;
+}
+
+@media only screen and (max-width: 1094px) {
+  .table {
+    width: 40em !important;
+    height: 50em !important;
+    font-size: 12px !important;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .table {
+    width: 100% !important;
+    height: 50em !important;
+    font-size: 12px !important;
+  }
+}
+
+@media only screen and (max-width: 528px) {
+  .table {
+    width: 100% !important;
+    font-size: 8px !important;
+  }
+}

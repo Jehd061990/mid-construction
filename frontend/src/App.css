@@ -1,0 +1,78 @@
+:root {
+  --brand-font: "Lobster", sans-serif;
+}
+
+#form-section {
+  font-family: var(--brand-font);
+  text-align: center;
+  font-size: 24px;
+}
+
+.update-section-title {
+  font-family: var(--brand-font);
+  text-align: center;
+  font-size: 24px;
+  color: rgb(2 132 199);
+}
+
+.floorplan-form {
+  overflow: hidden;
+  /* clip-path: inset(auto 10px 10px 0px); */
+  /* mask-image: linear-gradient(to bottom, transparent, rgb(0, 0, 0)); */
+  position: relative;
+  border-radius: 30px;
+  height: 35em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.floorplan-form .update-section {
+  position: absolute;
+  width: 100%;
+  height: 35em;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  /* background-color: rgb(200, 188, 159); */
+  border-radius: 30px;
+  transform: translateX(-30em);
+}
+
+.floorplan-form .update-section.open {
+  animation: update-section-open 0.2s linear forwards;
+}
+
+@keyframes update-section-open {
+  from {
+    transform: translateX(-30em);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.floorplan-form .update-section.close {
+  animation: update-section-close 0.2s linear forwards;
+}
+
+@keyframes update-section-close {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-30em);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .floorplan-form label {
+    width: 100% !important;
+  }
+
+  .floorplan-form {
+    width: 100%;
+  }
+}
